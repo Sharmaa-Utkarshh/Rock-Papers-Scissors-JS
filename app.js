@@ -9,6 +9,7 @@ possiblechoices.forEach(possiblechoice=> possiblechoice.addEventListener('click'
    userChoice= e.target.id; //The targetted ID when the event occurred get captured by e.target.id
    userchoice.innerHTML= userChoice;
    GenerateComputerChoice();
+   Results();
    
 }))
 
@@ -32,6 +33,16 @@ function GenerateComputerChoice(){
     //The code from line 22 to 30 can't be written out of this function because the scope of randomnumber is limited to this function only
     
 }
+
+function Results(){
+    if(computerchoicedisplay.innerHTML != userchoice.innerHTML){
+        result.innerHTML= "Lose";
+    }
+    else{
+        result.innerHTML= "Win";
+    }
+}
+
 
 
 
